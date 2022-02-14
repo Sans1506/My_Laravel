@@ -15,8 +15,8 @@ class CreatePerjalanansTable extends Migration
     {
         Schema::create('perjalanans', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('id_user');
-            $table->DateTime('Tanggal');
+            $table->BigInteger('id_user')->unique();
+            $table->date('Tanggal');
             $table->string('lokasi');
             $table->timestamps();
         });

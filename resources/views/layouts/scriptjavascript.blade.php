@@ -5,17 +5,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 <script src="../assets/js/stisla.js"></script>
-<script src="../dist/modules/jquery.min.js"></script>
-<script src="../dist/modules/popper.js"></script>
-<script src="../dist/modules/tooltip.js"></script>
-<script src="../dist/modules/bootstrap/js/bootstrap.min.js"></script>
-<script src="../dist/modules/nicescroll/jquery.nicescroll.min.js"></script>
-<script src="../dist/modules/moment.min.js"></script>
-<script src="../dist/js/stisla.js"></script>
 <!-- JS Libraies -->
 
 <!-- Template JS File -->
 <script src="../assets/js/scripts.js"></script>
 <script src="../assets/js/custom.js"></script>
-<script src="../dist/js/scripts.js"></script>
-<script src="../dist/js/custom.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

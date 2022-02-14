@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\user;
+use App\Models\perjalanan;
 use Illuminate\Http\Request;
 
 class loginController extends Controller
@@ -40,6 +41,15 @@ class loginController extends Controller
     }
     public function inputperjalanan(){
         return view('pages.inputperjalanan');
+    }
+    public function simpanperjalanan(Request $request){
+        $data=[
+            'id_user'=>$request->id,
+            'tanggal'=>$request->tanggal,
+            'lokasi'=>$request->lokasi
+        ];
+        // dd($data);
+        perjalanan::create($data); 
     }
     public function datauser(){
         return view('pages.datauser');

@@ -18,6 +18,7 @@ Route::get('/input',[loginController::class,'inputdata']);
 Route::get('/datauser',[loginController::class,'datauser']);
 Route::get('/perjalanan',[loginController::class,'perjalanan']);
 Route::get('/inputperjalanan',[loginController::class,'inputperjalanan']);
+Route::post('/simpanperjalanan',[loginController::class,'simpanperjalanan']);
 Route::get('/register',[loginController::class,'halamanRegister']);
 Route::get('/logout',[loginController::class,'logout']);
 Route::get('/login',[loginController::class,'login']);

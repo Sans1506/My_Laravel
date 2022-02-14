@@ -22,7 +22,7 @@
       </div>
       <footer class="main-footer">
         <div class="footer-left">
-           2022 <div class="bullet"></div> Design By <a href="https://www.instagram.com/_sans15/">Ikhsan Firmansyah</a>
+          2022 <div class="bullet"></div> Design By <a href="https://www.instagram.com/_sans15/">Ikhsan Firmansyah</a>
         </div>
       </footer>
     </div>
