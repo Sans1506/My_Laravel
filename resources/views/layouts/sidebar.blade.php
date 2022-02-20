@@ -19,8 +19,7 @@
         </li>
         <li class="menu-header">Starter</li>
         <li><a class="nav-link" href="/inputperjalanan"><i class="fas fa-file-alt"></i><span>Input Perjalanan</span></a></li>
-        <li><a class="nav-link" href="/perjalanan"><i class="fas fa-user-secret"></i><span>Perjalanan</span></a></li>
-        <li><a class="nav-link" href="/logout"><span>Logout</span></a></li>
+        <li><a class="nav-link" href="/logout"><i class="fas fa-user-secret"></i><span>Logout</span></a></li>
       <div class="mt-4 mb-4 p-3 hide-sidebar-mini">
         <a href="https://getstisla.com/docs" class="btn btn-primary btn-lg btn-block btn-icon-split">
           <i class="fas fa-rocket"></i> Documentation

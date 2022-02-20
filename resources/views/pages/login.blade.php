@@ -38,7 +38,7 @@
                           <i class="fas fa-lock"></i>
                         </div>
                       </div>
-                      <input type="password" class="form-control" placeholder="Nama Lengkap">
+                      <input type="text" class="form-control" placeholder="Nama Lengkap">
                     </div>
                   </div>
                   <div class="form-group mb-0">

@@ -4,50 +4,29 @@
     <h1>Home</h1>
 @endsection
 @section('section2')
-<div class="col-6 col-md-6 col-lg-6">
-    <div class="card">
-    <div class="card-header">
-        <h4>Kota Tujuan</h4>
-    </div>
-    <div class="card-body">
-        <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators2" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators2" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators2" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-            <img class="d-block w-100" src="{{asset('')}}assets/img/bandung.jpg" alt="First slide">
-            <div class="carousel-caption d-none d-md-block">
-                <h5>Bandung</h5>
-                {{-- <p></p> --}}
-            </div>
-            </div>
-            <div class="carousel-item">
-            <img class="d-block w-100" src="{{asset('')}}assets/img/bali.jpg" alt="Second slide">
-            <div class="carousel-caption d-none d-md-block">
-                <h5>Bali</h5>
-                {{-- <p></p> --}}
-            </div>
-            </div>
-            <div class="carousel-item">
-            <img class="d-block w-100" src="{{asset('')}}assets/img/lombok.jpg" alt="Third slide">
-            <div class="carousel-caption d-none d-md-block">
-                <h5>Lombok</h5>
-                {{-- <p></p> --}}
-            </div>
-            </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators2" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators2" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-        </div>
-    </div>
-    </div>
+<table class="table table-sm">
+    <thead>
+        @php
+            $no=1
+        @endphp
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Tanggal</th>
+            <th scope="col">Jam</th>
+            <th scope="col">Lokasi</th>
+            <th scope="col">Suhu</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach ($data as $peduli_diri)
+            <tr>
+                <th scope="row">{{$no++}}</th>
+                <td>{{$peduli_diri->tanggal}}</td>
+                <td>{{$peduli_diri->waktu}}</td>
+                <td>{{$peduli_diri->lokasi}}</td>
+                <td>{{$peduli_diri->suhu}}</td>
+            </tr>
+        @endforeach
+    </tbody>
+</table>
 @endsection

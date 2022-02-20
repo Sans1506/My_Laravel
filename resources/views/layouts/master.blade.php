@@ -15,8 +15,9 @@
           <div class="section-header">
             @yield('section')
           </div>
-          @yield('section2')
+          
           <div class="section-body">
+            @yield('section2')
           </div>
         </section>
       </div>

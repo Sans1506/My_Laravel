@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\loginController;
+use App\Http\Controllers\dashboardController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,13 +14,13 @@ use App\Http\Controllers\loginController;
 |
 */
 
-Route::get('/',[loginController::class,'dashboard']);
+Route::get('/',[dashboardController::class,'dashboard']);
 Route::get('/input',[loginController::class,'inputdata']);
 Route::get('/datauser',[loginController::class,'datauser']);
-Route::get('/perjalanan',[loginController::class,'perjalanan']);
 Route::get('/inputperjalanan',[loginController::class,'inputperjalanan']);
-Route::post('/simpanperjalanan',[loginController::class,'simpanperjalanan']);
+Route::post('/simpanperjalanan',[dashboardController::class,'simpanperjalanan']);
 Route::get('/register',[loginController::class,'halamanRegister']);
 Route::get('/logout',[loginController::class,'logout']);
 Route::get('/login',[loginController::class,'login']);
-Route::post('/simpanData',[loginController::class,'simpanRegister']);
+Route::post('/simpanregister',[loginController::class,'simpanRegister']);
+Route::get('/dashboard',[dashboardController::class,'index']);

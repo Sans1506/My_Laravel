@@ -17,7 +17,7 @@
               <div class="card-header card"><h4>Registrasi</h4></div>
 
               <div class="card-body">
-                <form method="POST" action="/simpanData" class="needs-validation" novalidate="">
+                <form method="POST" action="/simpanregister" class="needs-validation" novalidate="">
                   {{ csrf_field() }}
                   <div class="form-group">
                     <label for="nik">NIK</label>

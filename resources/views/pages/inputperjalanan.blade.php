@@ -11,19 +11,23 @@
         <h3>Data Perjalanan</h3>
       </div>
 <div class="card-body">
-  <form method="POST" action="/simpanperjalanan" class="needs-validation" novalidate="">
+  <form method="POST" action="/simpanperjalanan">
     {{ csrf_field() }}
     <div class="form-group">
-      <label for="id_user">id_user</label>
-      <input id="id_user" type="text" name="id" tabindex="1" placeholder="Id_User" class="form-control">
+      <label for="tanggal">tanggal</label>
+      <input type="date" class="form-control"  name="tanggal" placeholder="yy:mm:dd" id="tanggal">
     </div>
     <div class="form-group">
-      <label for="tanggal">tanggal</label>
-      <input type="text" class="form-control" tabindex="1" name="tanggal" placeholder="yy:mm:dd" id="tanggal">
+      <label for="tanggal">Jam</label>
+      <input type="time" class="form-control"  name="waktu" placeholder="--:--" id="waktu">
     </div>
     <div class="form-group">
       <label for="lokasi">lokasi</label>
-      <input type="text" class="form-control" tabindex="1" placeholder="Lokasi" name="lokasi" id="lokasi">
+      <input type="text" class="form-control"  placeholder="Lokasi" name="lokasi" id="lokasi">
+    </div>
+    <div class="form-group">
+      <label for="suhu">suhu</label>
+      <input type="number" class="form-control"  name="suhu" placeholder="suhu" id="suhu">
     </div>
     <button type="submit" class="btn btn-primary">Input</button>
   </form>
