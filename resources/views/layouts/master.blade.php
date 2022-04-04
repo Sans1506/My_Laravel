@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-@include('layouts.style')
+@include('css.style')
 <body>
   <div id="app">
     <div class="main-wrapper">
@@ -15,19 +15,18 @@
           <div class="section-header">
             @yield('section')
           </div>
-          
           <div class="section-body">
             @yield('section2')
           </div>
         </section>
       </div>
-      <footer class="main-footer">
-        <div class="footer-left">
-          2022 <div class="bullet"></div> Design By <a href="https://www.instagram.com/_sans15/">Ikhsan Firmansyah</a>
-        </div>
-      </footer>
     </div>
   </div>
-  @include('layouts.scriptjavascript')
+  @include('css.scriptjavascript')
 </body>
+<footer class="main-footer">
+  <div class="footer-left">
+    2022 <div class="bullet"></div> Design By <a href="https://www.instagram.com/_sans15/">Ikhsan Firmansyah</a>
+  </div>
+</footer>
 </html>

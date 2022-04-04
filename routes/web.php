@@ -1,8 +1,13 @@
 <?php
 
+use App\Http\Controllers\cariController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\loginController;
+use App\Http\Controllers\profileController;
+use App\Http\Controllers\registerController;
 use App\Http\Controllers\dashboardController;
+use App\Http\Controllers\logoutController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,13 +19,20 @@ use App\Http\Controllers\dashboardController;
 |
 */
 
-Route::get('/',[dashboardController::class,'dashboard']);
-Route::get('/input',[loginController::class,'inputdata']);
-Route::get('/datauser',[loginController::class,'datauser']);
-Route::get('/inputperjalanan',[loginController::class,'inputperjalanan']);
-Route::post('/simpanperjalanan',[dashboardController::class,'simpanperjalanan']);
-Route::get('/register',[loginController::class,'halamanRegister']);
-Route::get('/logout',[loginController::class,'logout']);
+Route::post('/simpanregister',[registerController::class,'simpanRegister']);
 Route::get('/login',[loginController::class,'login']);
-Route::post('/simpanregister',[loginController::class,'simpanRegister']);
-Route::get('/dashboard',[dashboardController::class,'index']);
+Route::post('/login',[loginController::class,'authenticate']);
+Route::get('/logout',[logoutController::class,'logout']);
+Route::group(['middleware' => 'guest'], function(){ 
+  Route::get('/',[dashboardController::class,'home'])->name('login');
+  Route::get('/register',[registerController::class,'halamanRegister']);
+});
+Route::group(['middleware' => 'auth'], function(){
+  Route::get('/dashboard',[dashboardController::class,'index']);
+  Route::get('/profile',[profileController::class,'profile']);
+  Route::get('/input',[dashboardController::class,'inputdata']);
+  Route::get('/datauser',[dashboardController::class,'datauser']);
+  Route::get('/inputperjalanan',[dashboardController::class,'inputperjalanan']);
+  Route::post('/simpanperjalanan',[dashboardController::class,'simpanperjalanan']);
+  Route::get('/cari',[cariController::class,'cariperjalanan']);
+});
